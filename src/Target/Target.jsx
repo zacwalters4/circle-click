@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react' 
 import './Target.css';
 
-function Target() {
+function Target({setScore}) {
     const [xPos, setXPos] = useState(30)
     const [yPos, setYPos] = useState(30)
 
@@ -10,11 +10,21 @@ function Target() {
         setYPos(Math.random() * 60)
     }
 
+    const handleClick = () => {
+        setScore(score => score +=1)
+        getPos()
+    }
+
+    useEffect(()=> {
+        getPos()
+      }, [])
+
     return (
-        <button
-            onClick={getPos}
+        <button 
+            tabIndex={-1}
+            onClick={handleClick}
             className="target"
-            style={{transform: `translate(${xPos}vh, ${yPos}vh)`}}
+            style={{left: `${xPos}vh`, top: `${yPos}vh`}}
             >
             <div className="target-center" />
         </button>

@@ -7,6 +7,9 @@
     aspect-ratio: 1/1;
     border-radius: 5vh;
     border: solid magenta 1.5vh;
+    position: relative;
+    transition: .1s;
+    /* animation: growshrink 4s; */
 }
 
 .target-center {
@@ -14,4 +17,16 @@
     height: 4vh;
     aspect-ratio: 1/1;
     border-radius: 2vh;
+}
+
+@keyframes growshrink {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
 }
