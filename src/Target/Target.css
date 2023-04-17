@@ -1,0 +1,19 @@
+.target {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 10vh;
+    aspect-ratio: 1/1;
+    border-radius: 5vh;
+    border: solid magenta 1.5vh;
+    position: relative;
+    transition: all .1s;
+}
+
+.target-center {
+    background-color: magenta;
+    height: 50%;
+    aspect-ratio: 1/1;
+    border-radius: 2vh;
+}

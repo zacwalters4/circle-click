@@ -2,4 +2,16 @@
     background-color: lightgray;
     height: 70vh;
     aspect-ratio: 1/1;
+    border: solid black 1vh;
+}
+
+.game-button {
+    position: relative;
+    top: 30vh;
+    width: 30vh;
+    height: 10vh;
+    font-size: xx-large;
+    font-weight: bold;
+    background-color: white;
+    border: solid black .5vh;
 }
