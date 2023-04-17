@@ -35,9 +35,9 @@ function Game({setScore, setTime, time}) {
 
   return (
     <div className="game">
-      {gameState === 0 && <button onClick={startGame}>Start Game</button>}
+      {gameState === 0 && <button className="game-button" onClick={startGame}>Start Game</button>}
       {gameState === 1 && <Target setScore={setScore}/>}
-      {gameState === 3 && <button onClick={() => setGameState(0)}>Try Again?</button>}
+      {gameState === 3 && <button className="game-button" onClick={() => setGameState(0)}>Try Again?</button>}
     </div>
   );
 }
