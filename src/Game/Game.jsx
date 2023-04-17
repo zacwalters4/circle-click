@@ -6,6 +6,7 @@ import { useState } from 'react'
 function Game({setScore, setTime, time}) {
 
   const [gameState, setGameState] = useState(0)
+  let intervalID
 
   const startGame = () => {
     setGameState(1)
@@ -14,17 +15,17 @@ function Game({setScore, setTime, time}) {
     countdown()
     setTimeout(() => {
       setGameState(3)
+      clearInterval(intervalID)
     }, 30000)
   }
 
   const countdown = () => {
-    setInterval(() => {
+    intervalID = setInterval(() => {
       
         setTime(time => {
           if(time > 0) {
             return time -= 1
           } else {
-            clearInterval()
             return 0
           }
         })
